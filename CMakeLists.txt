@@ -31,3 +31,9 @@ install(TARGETS ${CMAKE_PROJECT_NAME} DESTINATION /usr/local/lib)
 project(a.out)
 add_executable(${CMAKE_PROJECT_NAME} "tests/main.c" ${LIB_SOURCES})
 target_link_libraries(${CMAKE_PROJECT_NAME} libcheck.so)
+
+#
+# Create make test
+#
+enable_testing()
+add_test(unit-tests ${CMAKE_PROJECT_NAME})
