@@ -2,8 +2,9 @@
 
 [![Build Status](https://travis-ci.org/PublicHadyniak/travis-ci-sample.svg?branch=master)](https://travis-ci.org/PublicHadyniak/travis-ci-sample) ![codecov-badge](https://codecov.io/gh/PublicHadyniak/Travis-ci-sample/branch/master/graph/badge.svg)
 
-1. Add [`CodeCoverage.cmake`][cov-module] file to `scripts/cmake/` project directory
-1. Enable testing and add test coverage config to `CMakeLists.txt` (after test executable target setup, see full [file][cmakelists]):
+1. Add [`CodeCoverage.cmake`](https://github.com/bilke/cmake-modules/blob/master/CodeCoverage.cmake) file to `scripts/cmake/` project directory
+1. Enable testing and add test coverage config to `CMakeLists.txt` 
+(after test executable target setup, see full [file](https://github.com/PublicHadyniak/travis-ci-sample/blob/master/CMakeLists.txt)):
 
 	```
 	#
@@ -20,6 +21,4 @@
 	SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
 	```
 1. Coverage badge link: `https://codecov.io/gh/OWNER/REPO/branch/master/graph/badge.svg`
-
-	[cov-module]: https://github.com/bilke/cmake-modules/blob/master/CodeCoverage.cmake
-	[cmakelists]: https://github.com/PublicHadyniak/travis-ci-sample/blob/master/CMakeLists.txt 
+ 
