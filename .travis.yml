@@ -2,8 +2,6 @@ sudo: required
 language: c
 os:
   - linux
-compiler: 
-  - cmake
 
 before_install:
   - sudo apt-get install check
