@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8.7)
 #
 # Common settings
 #
-
+SET(CMAKE_C_FLAGS "-g -O0 -Wall -W -coverage")
 # adds ./include to compiler include directories
 include_directories(include)
 # compiles code files from ./src folder
