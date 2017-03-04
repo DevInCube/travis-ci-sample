@@ -3,7 +3,9 @@ cmake_minimum_required(VERSION 2.8.7)
 #
 # Common settings
 #
-SET(CMAKE_C_FLAGS "-g -O0 -Wall -W -coverage")
+SET(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
+SET(CMAKE_C_FLAGS "-g -O0 -Wall -W -fprofile-arcs -ftest-coverage")
+SET(CMAKE_EXE_LINKER_FLAGS "-fprofile-arcs -ftest-coverage")
 # adds ./include to compiler include directories
 include_directories(include)
 # compiles code files from ./src folder
@@ -31,6 +33,7 @@ install(TARGETS ${CMAKE_PROJECT_NAME} DESTINATION /usr/local/lib)
 project(a.out)
 add_executable(${CMAKE_PROJECT_NAME} "tests/main.c" ${LIB_SOURCES})
 target_link_libraries(${CMAKE_PROJECT_NAME} libcheck.so)
+target_link_libraries(${CMAKE_PROJECT_NAME} "gtest_main" "gtest" "pthread")
 
 #
 # Create make test
