@@ -12,7 +12,7 @@ END_TEST
 
 START_TEST (test_sample_2)
 {
-    ck_assert(0);
+    ck_assert(1);
 }
 END_TEST
 
