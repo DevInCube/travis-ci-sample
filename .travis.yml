@@ -4,7 +4,7 @@ os:
   - linux
 
 before_install:
-  - sudo apt-get install check
+  - sudo apt-get install check lcov
 
 before_script:  
   - cmake .
