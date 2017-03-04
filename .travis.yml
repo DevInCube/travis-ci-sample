@@ -7,11 +7,11 @@ before_install:
   - sudo apt-get install check
 
 before_script:  
-    - cmake .
+  - cmake .
 
 script: 
-	- make 
-	- make test
+  - make 
+  - make test
 
 after_success:
-	- bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
