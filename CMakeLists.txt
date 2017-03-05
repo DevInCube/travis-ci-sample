@@ -29,8 +29,8 @@ install(TARGETS ${CMAKE_PROJECT_NAME} DESTINATION /usr/local/lib)
 # Test project
 #
 project(a.out)
-set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY C_STANDARD 99)
 add_executable(${CMAKE_PROJECT_NAME} "tests/main.c" ${LIB_SOURCES})
+set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY C_STANDARD 99)
 target_link_libraries(${CMAKE_PROJECT_NAME} libcheck.so)
 
 #
