@@ -6,8 +6,10 @@ os:
 before_install:
   - sudo apt-get install check lcov
 
-script: 
+before_script:  
   - cmake .
+
+script: 
   - make 
   - make test
   - lcov --directory . --capture --output-file coverage.info
