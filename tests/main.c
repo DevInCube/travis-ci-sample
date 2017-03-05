@@ -12,7 +12,9 @@ END_TEST
 
 START_TEST (test_sample_2)
 {
-    ck_assert_float_eq(3.5, 3.5);
+    for (int i = 0; i < 2; i++) {
+      ck_assert_float_eq(3.5, 3.5);
+    }
 }
 END_TEST
 
