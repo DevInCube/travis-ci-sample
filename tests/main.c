@@ -12,7 +12,7 @@ END_TEST
 
 START_TEST (test_sample_2)
 {
-    ck_assert(1);
+    ck_assert_float_eq(3.5, 3.5);
 }
 END_TEST
 
